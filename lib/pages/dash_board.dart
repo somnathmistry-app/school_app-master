@@ -38,7 +38,7 @@ List<Icon> gridIcons =  [
 List<Widget> screens1 =
 [
   const Assignment(), const ExamRoutine(), ResultCategory(),  const HolidayList(), const LeaveApplication(),
-  const SchoolEvents(), const SchoolGallery(), AskDoubts(),  LogOut(),
+  const SchoolEvents(), const SchoolGallery(), AskDoubts(),  const LogOut(),
 ];
 
 List<String> gridText = ['Assignment', 'Exam\nRoutine', 'Result', 'School\nHolidays', 'Leave\nApplication',
@@ -177,7 +177,7 @@ class _DashBoardState extends State<DashBoard> {
               ),
             ),
             DraggableScrollableSheet(
-              initialChildSize: 0.66,
+              initialChildSize: 0.7,
               builder: (context, state) {
                 return ClipRRect(
                     borderRadius: const BorderRadius.only(

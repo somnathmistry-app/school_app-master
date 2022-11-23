@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages/bottom_nav_bar.dart';
+import 'package:school_app/pages/home_page.dart';
 import 'package:school_app/styles/app_colors.dart';
 
 import '../styles/common_module/my_widgets.dart';
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () async {
-      await Get.off(() => const BottomNavPage());
+      await Get.off(() => const HomePage());
       // Navigator.pushNamedAndRemoveUntil(context, MyRoutes.loginRout, (route) => false);
     });
 

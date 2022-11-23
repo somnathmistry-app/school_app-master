@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import '../apis/upload_banner_api.dart';
 import '../styles/common_module/my_alert_dilog.dart';
 import '../styles/common_module/my_snack_bar.dart';
@@ -48,7 +47,7 @@ class UploadBannerController extends GetxController{
 
   uploadBanner () async {
     MyAlertDialog.circularProgressDialog();
-    final box = GetStorage();
+    //final box = GetStorage();
     isLoaded(true);
     var apiResponse = await UploadBannerApi.uploadBanner(titleTEC.text,selectedImagePath.value, headlineTEC.text,'1');
 

@@ -27,7 +27,8 @@ class _LoginPageState extends State<LoginPage> {
       builder: (BuildContext context) {
         return AlertDialog(
           content:  const Text('This is a Confidential Login, Are you sure You have Admin Credentials?',
-              style: TextStyle(fontSize: 15)),
+              style: TextStyle(fontSize: 15)
+          ),
           title: const Text('Alert !!',style: TextStyle(fontSize: 17,color: Colors.red)),
           actions: [
             SizedBox(
@@ -54,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                     backgroundColor: MaterialStateProperty.all(Colors.red)),
                 child: const Text('Accept',style: TextStyle(color: Colors.white)),
                 onPressed: () {
-                  Get.off(()=> const AdminLogin());
+                  Get.off(()=> AdminLogin());
                 },
               ),
             ),

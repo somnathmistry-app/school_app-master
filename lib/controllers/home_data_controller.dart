@@ -24,5 +24,4 @@ class HomeDataController extends GetxController{
       isLoading(false);
     }
   }
-
 }

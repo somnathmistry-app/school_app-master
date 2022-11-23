@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:global_configuration/global_configuration.dart';
 import 'package:school_app/pages/splash_screen.dart';
 
 Future<void> main() async {

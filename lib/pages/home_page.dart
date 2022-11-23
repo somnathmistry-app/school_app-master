@@ -1,5 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:school_app/pages/dash_board.dart';
+import 'package:school_app/pages/log_in.dart';
+import 'package:school_app/pages_admin/admin_home.dart';
 import 'package:school_app/styles/app_colors.dart';
 
 import 'package:get/get.dart';
@@ -17,7 +21,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  HomeDataController homeDataController = Get.put(HomeDataController());
+
 
   List<String> imgList =
   [
@@ -27,24 +31,36 @@ class _HomePageState extends State<HomePage> {
     'assets/images/banner_d.jpg',
   ];
 
-
   List<String> imgUrls =
   [
-   'https://www.ptotoday.com/images/articles/body/0319-school-events-you-love-most-curriculum-body.jpg',
-   'https://brownschool.wustl.edu/SiteCollectionImages/events-slider-hero1.jpg',
+    'https://brownschool.wustl.edu/SiteCollectionImages/events-slider-hero1.jpg',
+    'https://www.ptotoday.com/images/articles/body/0319-school-events-you-love-most-curriculum-body.jpg',
    'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
+    'https://brownschool.wustl.edu/SiteCollectionImages/events-slider-hero1.jpg',
+    'https://www.ptotoday.com/images/articles/body/0319-school-events-you-love-most-curriculum-body.jpg',
+    'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
   ];
+  int currentPos = 0;
 
+// @override
+//   bool get mounted => super.mounted;
+
+  // @override
+  // initState(){
+  //   super.initState();
+  //   homeDataController.onInit();
+  // }
+
+
+  HomeDataController homeDataController = Get.put(HomeDataController());
+  var box = GetStorage();
   @override
   Widget build(BuildContext context) {
     return
-
       GetX<HomeDataController>(
-
         initState: (context) {
          homeDataController.getBannerData();
         },
-
         builder: (controller) {
           if (controller.isLoading.value) {
             return Center(
@@ -53,20 +69,46 @@ class _HomePageState extends State<HomePage> {
                 )
             );
           } else {
-            print(controller.bannerData1.length);
+           // print(controller.bannerData1.length);
             return Scaffold(
-                appBar: AppBar(backgroundColor: Colors.white,
+                appBar: AppBar(backgroundColor:AppColors.white,
                     centerTitle: true,
                     elevation: 0,
-                    title: Text('School Name',
-                      style: TextStyle(color: AppColors.themeColor),)
+                    title:  Text('School Name',
+                      style: TextStyle(color:  AppColors.themeColor),),
+                  actions: [
+                    InkWell(
+                      onTap: () {
+                        Get.to((){
+                          if((box.read('isLogin')) == null || (box.read('isLogin')) == false){
+                            return const LoginPage();
+                          }else if((box.read('isLogin')) == 'StudentLogIn'){
+                            return const DashBoard();
+                          }else{
+                            return const AdminHome();
+                          }
+                        });
+                        // Get.to(()=>(box.read('isLogin')) == null || (box.read('isLogin')) == false ?
+                        // const LoginPage():
+                        // const DashBoard(),);
+                      },
+                      child: Container(
+                          width: 42,
+                          margin: const EdgeInsets.symmetric(vertical: 7),
+                          decoration: BoxDecoration(
+                              color: AppColors.themeColor,
+                              borderRadius: BorderRadius.circular(25)),
+                          child: const Icon(Icons.person)),
+                    ),
+                    const SizedBox(width: 10,)
+                  ],
                 ),
                 body: ListView(
                   children: [
                     Center(child: Text('School Name',style: TextStyle(color: AppColors.black),)),
                     const SizedBox(height: 15,width: double.infinity,),
                     CarouselSlider.builder(
-                      itemCount: controller.bannerData1.length,
+                      itemCount: imgList.length,
                       itemBuilder:
                           (BuildContext context, int itemIndex, int pageViewIndex) =>
                           Container(
@@ -92,14 +134,35 @@ class _HomePageState extends State<HomePage> {
                         autoPlayCurve: Curves.fastOutSlowIn,
                         enlargeCenterPage: true,
                         scrollDirection: Axis.horizontal,
+                        onPageChanged: (index, reason) {
+                          setState(() {
+                            currentPos = index;
+                          });
+                        },
                       ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:
+                      imgList.map((e){
+                        int index = imgList.indexOf(e);
+                        return Container(
+                          height: 8,
+                          width: 8,
+                          margin: const EdgeInsets.symmetric(vertical: 10,horizontal: 2),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: currentPos == index? AppColors.themeColor: Colors.grey,
+                          ),
+                        );
+                      }).toList()
                     ),
                     const SizedBox(height: 20,),
                     Center(child: Text('About Us',style: TextStyle(color: AppColors.themeColor,fontSize: 19),)),
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 20),
                       child: Text(
-                        'The Society of Jesus, founded by St. '
+                            'The Society of Jesus, founded by St. '
                             'Ignatius of Loyola in 1540, gave the '
                             'world the present system of schooling'
                             ' and is active in the field of education '
@@ -221,17 +284,17 @@ class _HomePageState extends State<HomePage> {
                       },
                     ),
                   ],
-                )
-            );
+                ));
+      }
+    });
+  }
+  //
+  // @override
+  // void dispose() {
+  //   super.dispose();
+  //   homeDataController.dispose();
+  // }
 
-          }
-        });
-  }
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-  }
 }
 
 /*

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/pages_admin/assignment/upload_assignment.dart';
+import 'package:school_app/pages_admin/blogs/all_blogs.dart';
 import 'package:school_app/pages_admin/dashboard_pages/dashboard_admin.dart';
-import 'package:school_app/pages_admin/exam_routine.dart';
 import 'package:school_app/pages_admin/gallery_image/gallery_images.dart';
 import 'package:school_app/pages_admin/holidays_events.dart';
 import 'package:school_app/pages_admin/leaves/leave_request.dart';
 import 'package:school_app/pages_admin/results_upload.dart';
-import 'package:school_app/pages_admin/settings.dart';
 import 'package:school_app/pages_admin/query/student_query.dart';
 
 import '../styles/app_colors.dart';
@@ -20,28 +19,30 @@ class AdminHome extends StatefulWidget {
 }
 
 class _AdminHomeState extends State<AdminHome> {
+
+
   List<Widget> screens = [
     DashBoardAdmin(),
+    const AllBlogs(),
+    GalleryImages(),
     const UploadAssignment(),
-    const ExamRoutineUpload(),
+    //const ExamRoutineUpload(),
     const ResultsUpload(),
     const LeaveRequest(),
     const StudentQueries(),
     const HolidaysEvents(),
-    GalleryImages(),
-    const Settings(),
+   // const Settings(),
   ];
 
   List<String> titles = [
      'Admin DashBoard',
+     'All Blogs',
+     'Gallery Images',
      'Assignment Manage',
-     'Exam Routine Upload',
      'Results',
      'Leave Request',
      'Student Queries',
      'Holidays & Events',
-     'Gallery Images',
-     'Settings',
   ];
 
   Widget? body;
@@ -80,10 +81,8 @@ class _AdminHomeState extends State<AdminHome> {
                   child: Row(
                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      const SizedBox(width: 10,),
-                      Container(
-                        height: 50,
-                        width: 50,
+                      const SizedBox(width: 10),
+                      Container(height: 50, width: 50,
                         decoration: BoxDecoration(
                           image: const DecorationImage(
                               image: AssetImage('assets/images/admin_profile.jpg'),
@@ -122,7 +121,8 @@ class _AdminHomeState extends State<AdminHome> {
                   });
                 },
               );
-            },),
+             },
+            ),
           ],
         ),
       ),

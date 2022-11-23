@@ -59,7 +59,8 @@ class _AddImageState extends State<AddImage> {
                             image: DecorationImage(image: FileImage(uploadBannerController.selectedImageFile!),
                                 fit: BoxFit.cover)),
                       ),
-                    ),const SizedBox(height: 20,),
+                    ),
+                    const SizedBox(height: 20,),
                     Text('Click here to upload file',style: TextStyle(color: AppColors.themeColorLight)),
                     const SizedBox(height: 15,),
                     Container(

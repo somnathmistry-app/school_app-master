@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:school_app/pages/log_out_page.dart';
 import 'package:school_app/pages_admin/dashboard_pages/all_class.dart';
 
 import '../../styles/app_colors.dart';
@@ -12,14 +13,22 @@ class DashBoardAdmin extends StatelessWidget {
     'Students',
     'On Leave',
     'Holiday & Events',
-    'Coming soon',
+    'LogOut',
+  ];
+
+  List<Widget> gridPage=
+  [
+    const AllClass(),
+    const AllClass(),
+    const AllClass(),
+    const LogOut(),
   ];
 
   List<Icon> gridIcons =  [
     Icon(Icons.person, size: 30, color: AppColors.themeColor),
-    const Icon(Icons.library_books_sharp, size: 30, color: Colors.red),
+    const Icon(Icons.library_books_sharp, size: 30, color: Colors.amber),
     const Icon(Icons.holiday_village, size: 30, color: Colors.teal),
-    const Icon(Icons.info_outline, size: 30, color: Colors.amber),
+    const Icon(Icons.logout, size: 30, color: Colors.red),
   ];
 
   @override
@@ -43,7 +52,7 @@ class DashBoardAdmin extends StatelessWidget {
                 (BuildContext context, int index) {
               return InkWell(
                 onTap: () {
-                  Get.to(()=> const AllClass());
+                  Get.to(()=> gridPage[index]);
                 },
                 child: Container(
                   decoration: BoxDecoration(
