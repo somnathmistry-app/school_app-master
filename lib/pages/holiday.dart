@@ -89,7 +89,7 @@ class _HolidayListState extends State<HolidayList> {
       },
     );
     return Scaffold(
-        appBar: MyAppBar.myAppBar('Holidays'),
+        appBar: MyAppBars.myAppBar('Holidays'),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,

@@ -11,7 +11,7 @@ class LeaveApplication extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: MyAppBar.myAppBar('Leave form'),
+        appBar: MyAppBars.myAppBar('Leave form'),
         body: ListView(
           children: [
             Container(

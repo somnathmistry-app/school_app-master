@@ -9,7 +9,7 @@ class AllReceipts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar.myAppBar('All Receipts'),
+      appBar: MyAppBars.myAppBar('All Receipts'),
       body: ListView.builder(
           itemCount: 8,
           padding: const EdgeInsets.only(top: 10,bottom: 30),

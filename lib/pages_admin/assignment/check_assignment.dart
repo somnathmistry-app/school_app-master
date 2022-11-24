@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:school_app/styles/common_module/admin_appbar.dart';
+
+import '../../styles/common_module/app_bar.dart';
 
 
 class CheckAssignment extends StatelessWidget {
@@ -9,7 +10,7 @@ class CheckAssignment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AdminAppBar.myAppBar(''),
+      appBar: MyAppBars.adminAppBar(''),
       body: const Center(child: Text('No Submissions Yet . . .')),
     );
   }

@@ -19,7 +19,7 @@ class AskDoubts extends StatelessWidget {
   Widget build(BuildContext context) {
     return  SafeArea(
       child: Scaffold(
-        appBar: MyAppBar.myAppBar('Ask Doubts'),
+        appBar: MyAppBars.myAppBar('Ask Doubts'),
         body: ListView(
           children: [
             Container(

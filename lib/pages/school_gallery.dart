@@ -20,7 +20,7 @@ class SchoolGallery extends StatelessWidget {
     ];
     return SafeArea(
       child: Scaffold(
-        appBar: MyAppBar.myAppBar('Gallery'),
+        appBar: MyAppBars.myAppBar('Gallery'),
         body: GridView.builder(
           itemCount: imgUrls.length,
           padding: const EdgeInsets.all(5),

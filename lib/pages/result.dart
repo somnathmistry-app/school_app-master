@@ -11,7 +11,7 @@ class Result extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar.myAppBar(''),
+      appBar: MyAppBars.myAppBar(''),
       body: Stack(
         children: [
           Container(

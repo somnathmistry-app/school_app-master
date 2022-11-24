@@ -14,7 +14,7 @@ class ResultCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar.myAppBar('Check Result'),
+      appBar: MyAppBars.myAppBar('Check Result'),
       body: Center(
         child: GridView.builder(
           gridDelegate:

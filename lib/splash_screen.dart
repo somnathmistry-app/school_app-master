@@ -9,7 +9,6 @@ class SplashScreen extends StatefulWidget {
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
-
 }
 
 class _SplashScreenState extends State<SplashScreen> {
@@ -21,14 +20,15 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Stack(
         children: [
           SizedBox(
-              height: double.infinity,
-              width: double.infinity,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
               // color: AppColors.themeColor,
-              child: Image.asset('assets/images/bg_c.jpg',fit: BoxFit.cover,)
+              child: Image.asset('assets/images/bg_c.jpg',fit: BoxFit.cover,
+              )
           ),
           Positioned(
-            top: 140,
             right: 50,
+            top: 140,
             child: Container(
               height: 120,
               width: 120,
@@ -45,10 +45,9 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 4), () async {
+    Timer(const Duration(seconds: 5), () async {
       await Get.off(() => const HomePage());
       // Navigator.pushNamedAndRemoveUntil(context, MyRoutes.loginRout, (route) => false);
     });
-
   }
 }

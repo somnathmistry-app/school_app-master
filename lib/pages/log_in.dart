@@ -148,7 +148,7 @@ class LoginPage extends StatelessWidget {
                       onTap: () {
                         Get.off(()=> AdminLogin());
                       },
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         //  color: AppColors.themeColorLight,
                         child: Row(

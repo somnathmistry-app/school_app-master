@@ -12,7 +12,7 @@ class SchoolEvents extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: MyAppBar.myAppBar('Events & Programmes'),
+      appBar: MyAppBars.myAppBar('Events & Programmes'),
       body: ListView.builder(
         itemCount: 3,
         shrinkWrap: true,

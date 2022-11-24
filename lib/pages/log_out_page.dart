@@ -22,7 +22,7 @@ class _LogOutState extends State<LogOut> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text('Are you sure you want to LogOut?'),
+          const Text('Are you sure you want to Log Out?'),
           const SizedBox(height: 25),
           Row(
             mainAxisAlignment:   MainAxisAlignment.center,

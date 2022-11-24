@@ -10,7 +10,7 @@ class Assignment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar.myAppBar('Assignment'),
+      appBar: MyAppBars.myAppBar('Assignment'),
       body: Column(
         children: [
             Expanded(

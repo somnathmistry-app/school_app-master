@@ -14,7 +14,7 @@ class ProfileDetails extends StatelessWidget {
   Widget build(BuildContext context) {
      return SafeArea(
        child: Scaffold(
-         appBar: MyAppBar.myAppBar('My Profile'),
+         appBar: MyAppBars.myAppBar('My Profile'),
         body: SingleChildScrollView(
           child: Column(
             children: [

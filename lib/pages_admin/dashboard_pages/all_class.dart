@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:school_app/pages_admin/dashboard_pages/section.dart';
 
 import '../../styles/app_colors.dart';
-import '../../styles/common_module/admin_appbar.dart';
+import '../../styles/common_module/app_bar.dart';
 
 
 class AllClass extends StatelessWidget {
@@ -13,7 +13,7 @@ class AllClass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:AppColors.darkGrey,
-      appBar: AdminAppBar.myAppBar('Select Class'),
+      appBar: MyAppBars.adminAppBar('Select Class'),
       body:
       ListView.builder(
         itemCount: 7,

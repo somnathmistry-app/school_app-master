@@ -13,7 +13,7 @@ class ResultList extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> months =['January', 'February','March','April','May'];
     return Scaffold(
-      appBar: MyAppBar.myAppBar('List of result'),
+      appBar: MyAppBars.myAppBar('List of result'),
       body: Column(
         children: [
           Expanded(

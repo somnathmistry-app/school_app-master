@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_app/pages_admin/dashboard_pages/full_details.dart';
 import '../../styles/app_colors.dart';
-import '../../styles/common_module/admin_appbar.dart';
+import '../../styles/common_module/app_bar.dart';
 
 class StudentDetails extends StatelessWidget {
   const StudentDetails({Key? key}) : super(key: key);
@@ -11,7 +11,7 @@ class StudentDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.darkGrey,
-      appBar: AdminAppBar.myAppBar('All Students'),
+      appBar: MyAppBars.adminAppBar('All Students'),
       body: ListView.builder(
           itemCount: 3,
           padding: const EdgeInsets.only(top: 0,bottom: 30),

@@ -6,7 +6,8 @@ import 'package:get/get.dart';
 import '../../../styles/app_colors.dart';
 import '../../controllers/blog_upload_controller.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:school_app/styles/common_module/admin_appbar.dart';
+
+import '../../styles/common_module/app_bar.dart';
 
 
 
@@ -27,7 +28,7 @@ class BlogUpload extends StatefulWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AdminAppBar.myAppBar(''),
+      appBar: MyAppBars.adminAppBar(''),
         body: Scaffold(
           backgroundColor: Colors.black87,
           body: SingleChildScrollView(
@@ -95,7 +96,7 @@ class BlogUpload extends StatefulWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 15,),
+                  const SizedBox(height: 15),
                   Container(
                     width: double.infinity,
                     padding: const EdgeInsets.only(left:10,top: 15,bottom: 15),
@@ -111,7 +112,7 @@ class BlogUpload extends StatefulWidget {
                           child: TextFormField(
                             keyboardType: TextInputType.multiline,
                             validator: (value) =>
-                            value!.isEmpty ? 'please enter content': null,
+                            value!.isEmpty ? 'please enter content' : null,
                             controller: uploadBlogController.headlineTEC,
                             minLines: 6, // any number you need (It works as the rows for the textarea)
                             maxLines: null,
@@ -145,6 +146,9 @@ class BlogUpload extends StatefulWidget {
                         if(_formKey.currentState!.validate()){
                          uploadBlogController.uploadBlog(selectedImagePath.value);
                         }
+                        // else if(profileImage == null){
+                        //   MySnackbar.errorSnackBar('Image is empty', 'Please select image file');
+                        // }
                       },
                       style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.teal),
                           shape: MaterialStateProperty.all(RoundedRectangleBorder(

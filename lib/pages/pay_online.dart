@@ -12,7 +12,7 @@ class PayOnline extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: MyAppBar.myAppBar(''),
+        appBar: MyAppBars.myAppBar(''),
         body: Stack(
           children: [
             Column(

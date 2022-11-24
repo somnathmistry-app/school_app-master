@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../styles/app_colors.dart';
-import '../../styles/common_module/admin_appbar.dart';
+import '../../styles/common_module/app_bar.dart';
 
 
 class AnswerQuery extends StatelessWidget {
@@ -12,7 +12,7 @@ class AnswerQuery extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scaffold(
-        appBar: AdminAppBar.myAppBar(''),
+        appBar: MyAppBars.adminAppBar(''),
         backgroundColor: Colors.black87,
         body: ListView(
           children: [

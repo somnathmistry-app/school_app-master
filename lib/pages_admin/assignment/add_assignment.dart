@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:intl/intl.dart';
 import '../../styles/app_colors.dart';
-import '../../styles/common_module/admin_appbar.dart';
+import '../../styles/common_module/app_bar.dart';
 import '../../styles/common_module/my_widgets.dart';
 
 
@@ -16,7 +16,7 @@ class AddAssignment extends StatelessWidget {
       final String formatted = formatter. format(now);
     return Scaffold(
       backgroundColor: AppColors.darkGrey,
-      appBar: AdminAppBar.myAppBar(''),
+      appBar: MyAppBars.adminAppBar(''),
       body: ListView(
         children: [
           const SizedBox(height: 15),

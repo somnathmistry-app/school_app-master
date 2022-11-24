@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../styles/app_colors.dart';
-import '../../styles/common_module/admin_appbar.dart';
+import '../../styles/common_module/app_bar.dart';
 import '../../styles/common_module/my_widgets.dart';
 
 
@@ -11,7 +11,7 @@ class EditAssignment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.darkGrey,
-      appBar: AdminAppBar.myAppBar(''),
+      appBar: MyAppBars.adminAppBar(''),
       body: ListView(
         children: [
           const SizedBox(height: 15),

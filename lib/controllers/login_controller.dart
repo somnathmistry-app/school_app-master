@@ -97,7 +97,6 @@ class LoginController extends GetxController{
         Get.back();
         MySnackbar.errorSnackBar('Server Down', 'Please try again later');
       }
-
     }
     else{
       Get.back();

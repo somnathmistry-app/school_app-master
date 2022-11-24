@@ -11,7 +11,7 @@ class ExamRoutine extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> subjects = [ 'Bengali','English','Science', 'Mathematics','Geography', 'History'];
     return Scaffold(
-      appBar: MyAppBar.myAppBar('Time Table'),
+      appBar: MyAppBars.myAppBar('Time Table'),
       body: Column(
         children: [
           const SizedBox(height: 15,),

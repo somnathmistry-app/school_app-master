@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:school_app/styles/app_colors.dart';
 
 
-class MyAppBar {
+class MyAppBars {
   static AppBar myAppBar(String name,) =>
       AppBar(
           backgroundColor: AppColors.themeColor,
@@ -19,6 +19,23 @@ class MyAppBar {
               const TextStyle(color: Colors.white,
                   fontWeight: FontWeight.w400,
                   fontSize: 16)));
+
+  static AppBar adminAppBar(String name) =>
+      AppBar(
+        elevation: 0,
+        backgroundColor: Colors.black,
+        title:  Text(name,
+            style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w400,
+                fontSize: 16)),
+        leading: InkWell(
+            onTap: () {
+              Get.back();
+            },
+            child: const Icon(Icons.arrow_back_ios_new)),
+        centerTitle: true,
+      );
 }
 
 
