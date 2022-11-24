@@ -52,7 +52,7 @@ class DashBoardAdmin extends StatelessWidget {
                 (BuildContext context, int index) {
               return InkWell(
                 onTap: () {
-                  Get.to(()=> gridPage[index]);
+                  Get.to(gridPage[index]);
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -70,7 +70,8 @@ class DashBoardAdmin extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: AppColors.black,
-                              fontSize: 14)),
+                              fontSize: 14)
+                      ),
                     ],
                   ),
                 ),

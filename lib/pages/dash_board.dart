@@ -234,7 +234,7 @@ class _DashBoardState extends State<DashBoard> {
                                           (BuildContext context, int index) {
                                         return InkWell(
                                           onTap: () {
-                                            Get.to(() => screens1[index]);
+                                            Get.to(screens1[index]);
                                           },
                                           child: Container(
                                             decoration: BoxDecoration(

@@ -3,9 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_app/pages/home_page.dart';
-import 'package:school_app/styles/app_colors.dart';
-
-import '../styles/common_module/my_widgets.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -21,12 +18,26 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: AppColors.themeColor,
-          child: Center(
-              child: MyWidgets.textView('Splash Screen', Colors.white, 18)),
+      body: Stack(
+        children: [
+          SizedBox(
+              height: double.infinity,
+              width: double.infinity,
+              // color: AppColors.themeColor,
+              child: Image.asset('assets/images/bg_c.jpg',fit: BoxFit.cover,)
+          ),
+          Positioned(
+            top: 140,
+            right: 50,
+            child: Container(
+              height: 120,
+              width: 120,
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
+                  image: const DecorationImage(
+                      image: AssetImage('assets/images/logo.png'))),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -34,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () async {
+    Timer(const Duration(seconds: 4), () async {
       await Get.off(() => const HomePage());
       // Navigator.pushNamedAndRemoveUntil(context, MyRoutes.loginRout, (route) => false);
     });

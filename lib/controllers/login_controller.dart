@@ -41,7 +41,7 @@ class LoginController extends GetxController{
         box.write('email', email);
         box.write('isLogin', 'StudentLogIn');
         //print(box.read('isLogin'));
-        Get.offAll(() => const DashBoard());
+        Get.off(() => const DashBoard());
         MySnackbar.successSnackBar('Login Succeed', 'Welcome');
       }
 

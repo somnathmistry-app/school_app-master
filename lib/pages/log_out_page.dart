@@ -23,15 +23,14 @@ class _LogOutState extends State<LogOut> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text('Are you sure you want to LogOut?'),
-          const SizedBox(height: 25,),
+          const SizedBox(height: 25),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment:   MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ElevatedButton(
                 onPressed: () {
                  MySnackbar.infoSnackBar('Logout complete!!', 'You are no longer logged in');
-
                  // LoginController.isLoading(false);
                   box.write('isLogin', null);
                   Get.offAll(() => const HomePage());
