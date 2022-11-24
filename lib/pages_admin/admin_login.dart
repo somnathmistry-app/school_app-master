@@ -35,9 +35,9 @@ class AdminLogin extends StatelessWidget {
                 color: Colors.white,
                 cornerRadius: 16,
                 snapSpec: const SnapSpec(
-                  snap: true,
-                  snappings: [0.9, 0.9, 1.0],
-                  positioning: SnapPositioning.relativeToAvailableSpace,
+                  // snap: true,
+                  snappings: [0.5, 0.7, 1.0],
+                //  positioning: SnapPositioning.relativeToAvailableSpace,
                 ),
                 builder: (context, state) {
                   return Column(
@@ -53,7 +53,7 @@ class AdminLogin extends StatelessWidget {
                             color: AppColors.darkGrey,
                           ),
                         ),
-                      ),  const SizedBox(height: 20),
+                      ),const SizedBox(height: 20),
                       Padding(
                         padding: const EdgeInsets.only(right: 22),
                         child: MyWidgets.textView('Admin Login',
@@ -72,7 +72,7 @@ class AdminLogin extends StatelessWidget {
                             fillColor: AppColors.lightSeeGreen,
                             filled: true,
                             label:  const Text('Email'),
-                            labelStyle:  const TextStyle(
+                            labelStyle: const TextStyle(
                                 fontSize: 13,
                                 color: Colors.grey,
                                 fontStyle: FontStyle.normal),
@@ -113,7 +113,7 @@ class AdminLogin extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 40,),
+                      const SizedBox(height: 30,),
                       SizedBox(
                         width: 250,
                         height: 45,
@@ -135,36 +135,34 @@ class AdminLogin extends StatelessWidget {
                       const SizedBox(height: 15,),
                       Padding(
                         padding: const EdgeInsets.only(right: 22),
-                        child: MyWidgets.textView('', AppColors.black, 16),
+                        child: MyWidgets.textView('Forget Password?', AppColors.black, 16),
                       ),
-                      Container(
-                        height: 60,
-                        color: Colors.white,
-                      ),
+                      Container(height: 40,),
                       InkWell(
                         onTap: () {
-                          Get.off(()=> const LoginPage());
+                          Get.off(()=>  LoginPage());
                         },
-                        child: Container(
-                          height: 50,
+                        child: SizedBox(
+                         // height: 50,
                           width: double.infinity,
-                          color: AppColors.themeColorLight,
+                        //  color: AppColors.themeColorLight,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(Icons.arrow_back,color: AppColors.darkGrey,),
-                              Text('   Student Login ',style: TextStyle(fontSize: 16,color: AppColors.darkGrey))
+                              Text('   Student Login ',style: TextStyle(fontSize: 16,color: AppColors.darkGrey)),
+                              const SizedBox(height: 15,)
                             ],
                           ),
                         ),
-                      )
+                      ),
+                      Container(height: 50,)
                     ],
                   );
                 },
               ),
             ),
           ],
-
         ),
       ),
     );

@@ -9,6 +9,7 @@ import '../styles/common_module/my_snack_bar.dart';
 
 
 class LoginController extends GetxController{
+
   TextEditingController emailTEC = TextEditingController();
   TextEditingController passwordTEC = TextEditingController();
 
@@ -43,6 +44,7 @@ class LoginController extends GetxController{
         Get.offAll(() => const DashBoard());
         MySnackbar.successSnackBar('Login Succeed', 'Welcome');
       }
+
       else if(apiResponse.response=='invalid email'){
         Get.back();
         MySnackbar.infoSnackBar('Invalid Email', 'Invalid email, please try again with another one');
@@ -96,7 +98,8 @@ class LoginController extends GetxController{
         MySnackbar.errorSnackBar('Server Down', 'Please try again later');
       }
 
-    }else{
+    }
+    else{
       Get.back();
       MySnackbar.errorSnackBar('Server Down', 'Please try again later');
     }

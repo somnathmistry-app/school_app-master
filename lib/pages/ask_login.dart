@@ -18,7 +18,7 @@ class AskLogin extends StatelessWidget {
           const SizedBox(height: 25,),
           ElevatedButton(
             onPressed: () {
-              Get.to(()=> const LoginPage());
+              Get.to(()=> LoginPage());
             },
             child: const Text('LogIn'),
           )

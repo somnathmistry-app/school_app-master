@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Get.to((){
                           if((box.read('isLogin')) == null || (box.read('isLogin')) == false){
-                            return const LoginPage();
+                            return  LoginPage();
                           }else if((box.read('isLogin')) == 'StudentLogIn'){
                             return const DashBoard();
                           }else{
