@@ -179,7 +179,8 @@ class _HomePageState extends State<HomePage> {
                         textAlign: TextAlign.justify,
                         style: TextStyle(color: AppColors.black),),
                     ),
-                    Center(child: Text('Recent Activities',style: TextStyle(color: AppColors.themeColor,fontSize: 19))),
+                    Center(child: Text('Recent Activities',style: TextStyle(color: AppColors.themeColor,
+                        fontSize: 19))),
                     ListView.builder(
                       itemCount: imgUrls.length,
                       shrinkWrap: true,
@@ -198,7 +199,8 @@ class _HomePageState extends State<HomePage> {
                                   image: DecorationImage(
                                       image: NetworkImage(imgUrls[index]),
                                       fit: BoxFit.cover),
-                                  borderRadius: const BorderRadius.only(topRight: Radius.circular(15),topLeft: Radius.circular(15)),
+                                  borderRadius: const BorderRadius.only(topRight: Radius.circular(15),
+                                      topLeft: Radius.circular(15)),
                                   color: Colors.white,
                                 ),
                                 width: double.infinity,

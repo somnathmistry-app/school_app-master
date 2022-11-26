@@ -74,12 +74,14 @@ class LoginController extends GetxController{
 
       if(apiResponse.response=='ok'){
 
-        String id = apiResponse.userData!.id.toString();
-        String email = apiResponse.userData!.email.toString();
+        String adminId = apiResponse.userData!.id.toString();
+        String adminName = apiResponse.userData!.name.toString();
+        String adminEmail = apiResponse.userData!.email.toString();
 
 
-        box.write('id', id);
-        box.write('email', email);
+        box.write('adminId', adminId);
+        box.write('adminName', adminName);
+        box.write('adminEmail', adminEmail);
         box.write('isLogin', 'AdminLogIn');
         //print(box.read('isLogin'));
         Get.offAll(() => const AdminHome());
