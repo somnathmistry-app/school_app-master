@@ -30,7 +30,6 @@ final ButtonStyle elevatedButtonStyleWhiteCurve = ElevatedButton.styleFrom(
   ),
 );
 
-
 final ButtonStyle textButtonStyleWhite = TextButton.styleFrom(
   foregroundColor: Colors.black87, minimumSize: const Size(88, 36),
   padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -56,7 +55,6 @@ final ButtonStyle curveButtonStyleThemeColor = ElevatedButton.styleFrom(
     borderRadius: BorderRadius.all(Radius.circular(20)),
   ),
 );
-
 
 final ButtonStyle elevatedButtonStyleStripe = ElevatedButton.styleFrom(
   foregroundColor: Colors.white, backgroundColor: Colors.deepPurpleAccent,

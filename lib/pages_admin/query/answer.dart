@@ -11,7 +11,6 @@ class AnswerQuery extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Scaffold(
         appBar: MyAppBars.adminAppBar(''),
         backgroundColor: Colors.black87,
         body: ListView(
@@ -111,7 +110,6 @@ class AnswerQuery extends StatelessWidget {
             const SizedBox(height: 20,),
           ],
         ),
-      )
-    );
+      );
   }
 }
