@@ -19,7 +19,7 @@ class ResultCategory extends StatelessWidget {
         child: GridView.builder(
           gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(
-            childAspectRatio: 1.4,
+            childAspectRatio: 7/5,
               crossAxisCount: 3),
           itemCount: gridText.length,
           padding: const EdgeInsets.only(top: 15),
@@ -30,15 +30,13 @@ class ResultCategory extends StatelessWidget {
                 Get.to(()=> const ResultList());
               },
               child: Container(
-                height: 100,
+               // height: 100,
                 decoration: BoxDecoration(
                     color: AppColors.themeColorLight,
                     borderRadius:
                     BorderRadius.circular(15)),
                 padding: EdgeInsets.zero,
-                margin: const EdgeInsets.fromLTRB(
-                    5, 0, 5, 20
-                ),
+                margin: const EdgeInsets.all(5),
                 child: Column(
                   // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -47,7 +45,7 @@ class ResultCategory extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: AppColors.black,
-                            fontSize: 16)),
+                            fontSize: 15)),
                     const SizedBox(height: 10,),
                     const Text('2022',
                         textAlign: TextAlign.center,

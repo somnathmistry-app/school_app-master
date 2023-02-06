@@ -7,10 +7,11 @@ class HolidaysEvents extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.black87,
-
-      body: Container(),
+      body: Center(
+        child: Text('Work in progress...!!',style: TextStyle(color: Colors.white)),
+      ),
     );
   }
 }

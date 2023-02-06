@@ -9,7 +9,6 @@ class EditProfile extends StatefulWidget {
 
   @override
   State<EditProfile> createState() => _EditProfileState();
-
 }
 
 class _EditProfileState extends State<EditProfile> {
@@ -37,7 +36,7 @@ class _EditProfileState extends State<EditProfile> {
               Get.back();
             },
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(AppColors.themeColor),
+                backgroundColor: MaterialStateProperty.all(AppColors.themeColorTwo),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16)))),
             icon: const Icon(Icons.done),
@@ -49,7 +48,7 @@ class _EditProfileState extends State<EditProfile> {
       body: Stack(
         children: [
           ListView(
-            children:  [
+            children: [
               const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -66,7 +65,6 @@ class _EditProfileState extends State<EditProfile> {
                   const CircleAvatar(
                       radius: 40,
                       // backgroundColor: Colors.grey,
-
                     backgroundImage: AssetImage('assets/images/profile_img.jpg'),
                   ),
                 ],
@@ -80,7 +78,7 @@ class _EditProfileState extends State<EditProfile> {
                     style: TextStyle(fontSize: 15, color: AppColors.black),
                     initialValue: '5824  5824  6874  4128',
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: AppColors.themeColorLight,
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
@@ -105,9 +103,9 @@ class _EditProfileState extends State<EditProfile> {
                     keyboardType: TextInputType.name,
                     textInputAction: TextInputAction.next,
                     style: TextStyle(fontSize: 15, color: AppColors.black),
-                    initialValue: 'abhiraj@gmail.com',
+                    initialValue: 'ishita12@gmail.com',
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: AppColors.themeColorLight,
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
@@ -136,7 +134,7 @@ class _EditProfileState extends State<EditProfile> {
                     // validator: (input) =>
                     // input!.isEmpty ? "Enter Your Name" : null,
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: AppColors.themeColorLight,
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
@@ -165,7 +163,7 @@ class _EditProfileState extends State<EditProfile> {
                     // validator: (input) =>
                     // input!.isEmpty ? "Enter Your Name" : null,
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: AppColors.themeColorLight,
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(
@@ -194,7 +192,7 @@ class _EditProfileState extends State<EditProfile> {
                     // validator: (input) =>
                     // input!.isEmpty ? "Enter Your Name" : null,
                     decoration: InputDecoration(
-                      hintStyle: const TextStyle(color: Colors.black),
+                      hintStyle: const TextStyle(color: Colors.grey),
                       fillColor: AppColors.themeColorLight,
                       filled: true,
                       contentPadding: const EdgeInsets.symmetric(

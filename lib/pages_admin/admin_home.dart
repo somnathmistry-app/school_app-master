@@ -55,7 +55,7 @@ class _AdminHomeState extends State<AdminHome> {
     body = DashBoardAdmin();
     appBarText = 'Admin Dashboard';
   }
-  final box = GetStorage();
+//  final box = GetStorage();
 
   @override
   Widget build(BuildContext context) {
@@ -96,10 +96,10 @@ class _AdminHomeState extends State<AdminHome> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children:  [
-                          Text(box.read('adminName')),
-                          Text(box.read('adminEmail')),
-                          const SizedBox(height: 8),
+                        children: const [
+                          Text('adminName'),
+                          Text('adminEmail'),
+                          SizedBox(height: 8),
                         ],
                       ),
                       const SizedBox(height: 15,),
@@ -115,7 +115,7 @@ class _AdminHomeState extends State<AdminHome> {
               return DrawerListTile(
                 title: titles[index],
                 icon:  Icons.access_time,
-                press: () {
+                onPress: () {
                   Navigator.pop(context);
                   setState((){
                     body = screens[index];
@@ -138,17 +138,17 @@ class DrawerListTile extends StatelessWidget {
     Key? key,
     required this.title,
     required this.icon,
-    required this.press,
+    required this.onPress,
   }) : super(key: key);
 
   final String title;
   final IconData icon;
-  final VoidCallback press;
+  final VoidCallback onPress;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: press,
+      onTap: onPress,
       horizontalTitleGap: 0.0,
       leading: Icon(
         icon,

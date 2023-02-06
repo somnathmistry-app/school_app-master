@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_app/controllers/login_controller.dart';
 import 'package:school_app/pages/log_in.dart';
+import 'package:school_app/pages_admin/dashboard_pages/dashboard_admin.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 import '../styles/app_colors.dart';
 import '../styles/common_module/my_widgets.dart';
+import 'admin_home.dart';
 
 
 class AdminLogin extends StatelessWidget {
@@ -134,9 +136,10 @@ class AdminLogin extends StatelessWidget {
                               )
                           ),
                           onPressed: () {
-                            if(_key.currentState!.validate()){
-                              loginController.getAdminLogin();
-                            }
+                            // if(_key.currentState!.validate()){
+                            //   loginController.getAdminLogin();
+                            // }
+                            Get.to(() => const AdminHome());
                           },
                           child: MyWidgets.textView("Proceed", AppColors.white, 16)),
                     ),

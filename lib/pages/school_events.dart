@@ -11,7 +11,6 @@ class SchoolEvents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       appBar: MyAppBars.myAppBar('Events & Programmes'),
       body: ListView.builder(
         itemCount: 3,

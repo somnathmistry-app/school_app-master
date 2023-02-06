@@ -33,52 +33,54 @@ class DashBoardAdmin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.black87,
-          ),
-          GridView.builder(
-            gridDelegate:
-            const SliverGridDelegateWithFixedCrossAxisCount(
-                childAspectRatio: 1.3,
-                crossAxisCount: 3),
-            itemCount: 4,
-            padding: const EdgeInsets.only(top: 20),
-            itemBuilder:
-                (BuildContext context, int index) {
-              return InkWell(
-                onTap: () {
-                  Get.to(gridPage[index]);
-                },
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: AppColors.themeColorLight,
-                      borderRadius:
-                      BorderRadius.circular(15)),
-                  margin: const EdgeInsets.only(
-                      left: 5, right: 5, bottom: 20),
-                  child: Column(
-                    mainAxisAlignment:
-                    MainAxisAlignment.spaceEvenly,
-                    children: [
-                      gridIcons[index],
-                      Text(gridText[index],
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: AppColors.black,
-                              fontSize: 14)
-                      ),
-                    ],
+    return SafeArea(
+      child: Scaffold(
+        body: Stack(
+          children: [
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.black87,
+            ),
+            GridView.builder(
+              gridDelegate:
+              const SliverGridDelegateWithFixedCrossAxisCount(
+                  childAspectRatio: 1.3,
+                  crossAxisCount: 3),
+              itemCount: 4,
+              padding: const EdgeInsets.only(top: 20),
+              itemBuilder:
+                  (BuildContext context, int index) {
+                return InkWell(
+                  onTap: () {
+                    Get.to(gridPage[index]);
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: AppColors.themeColorLight,
+                        borderRadius:
+                        BorderRadius.circular(15)),
+                    margin: const EdgeInsets.only(
+                        left: 5, right: 5, bottom: 20),
+                    child: Column(
+                      mainAxisAlignment:
+                      MainAxisAlignment.spaceEvenly,
+                      children: [
+                        gridIcons[index],
+                        Text(gridText[index],
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: AppColors.black,
+                                fontSize: 14)
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              );
-            },
-          ),
-        ],
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

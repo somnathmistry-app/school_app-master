@@ -33,9 +33,10 @@ class _HomePageState extends State<HomePage> {
 
   List<String> imgUrls =
   [
+    'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
     'https://brownschool.wustl.edu/SiteCollectionImages/events-slider-hero1.jpg',
     'https://www.ptotoday.com/images/articles/body/0319-school-events-you-love-most-curriculum-body.jpg',
-   'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
+    'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
     'https://brownschool.wustl.edu/SiteCollectionImages/events-slider-hero1.jpg',
     'https://www.ptotoday.com/images/articles/body/0319-school-events-you-love-most-curriculum-body.jpg',
     'https://www.southpoint.edu.in/wp-content/uploads/2018/02/satrangi.jpg',
@@ -63,10 +64,12 @@ class _HomePageState extends State<HomePage> {
         },
         builder: (controller) {
           if (controller.isLoading.value) {
-            return Center(
-                child: CircularProgressIndicator(
-                  color: AppColors.darkGrey,
-                )
+            return Scaffold(
+              body: Center(
+                  child: CircularProgressIndicator(
+                    color: AppColors.darkGrey,
+                  )
+              ),
             );
           } else {
            // print(controller.bannerData1.length);
@@ -224,9 +227,10 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Center(
                         child: Text(
-                          'Faculty',
+                          'Faculty Details',
                           style: TextStyle(color: AppColors.themeColor, fontSize: 19),
-                        )),
+                        )
+                    ),
                     GridView.builder(
                       itemCount: 5,
                       padding: const EdgeInsets.all(5),
@@ -249,7 +253,7 @@ class _HomePageState extends State<HomePage> {
                                     image: NetworkImage(
                                         'https://shivnadarschool.edu.in/sites/default/files/team/Manjima.JPG'
                                     )
-                                )
+                                ),
                             ),
                             margin: const EdgeInsets.all(8),
                             //  padding: const EdgeInsets.only(top: 130),

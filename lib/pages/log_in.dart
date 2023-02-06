@@ -5,6 +5,7 @@ import 'package:school_app/pages_admin/admin_login.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 import '../styles/app_colors.dart';
 import '../styles/common_module/my_widgets.dart';
+import 'dash_board.dart';
 
 
 class LoginPage extends StatelessWidget {
@@ -96,7 +97,6 @@ class LoginPage extends StatelessWidget {
                     ),
                     Container(
                       margin: const EdgeInsets.symmetric(horizontal: 30),
-                      // height: 50,
                       child: TextFormField(
                         obscureText: true,
                         validator: (value) =>
@@ -132,9 +132,10 @@ class LoginPage extends StatelessWidget {
                               )
                           ),
                           onPressed: () {
-                            if(_key.currentState!.validate()){
-                              loginController.getLogin();
-                            }
+                            // if(_key.currentState!.validate()){
+                            //   loginController.getLogin();
+                            // }
+                            Get.to(() => const DashBoard());
                           },
                           child: MyWidgets.textView("Log In", AppColors.white, 16)),
                     ),
@@ -146,7 +147,7 @@ class LoginPage extends StatelessWidget {
                     Container(height: 40,),
                     InkWell(
                       onTap: () {
-                        Get.off(()=> AdminLogin());
+                        Get.to(()=> AdminLogin());
                       },
                       child: SizedBox(
                         width: double.infinity,
