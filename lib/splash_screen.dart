@@ -15,7 +15,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       body: Stack(
         children: [
@@ -23,25 +22,26 @@ class _SplashScreenState extends State<SplashScreen> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height,
               // color: AppColors.themeColor,
-              child: Image.asset('assets/images/bg_c.jpg',fit: BoxFit.cover,
+              child: Image.asset('assets/images/bg_23.jpg',fit: BoxFit.fill,
               )
           ),
           Positioned(
-            right: 50,
-            top: 140,
+            right: 60,
+            top: 120,
             child: Container(
               height: 120,
               width: 120,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(60),
                   image: const DecorationImage(
-                      image: AssetImage('assets/images/logo.png'))),
+                      image: AssetImage('assets/images/logo_white.png'),fit: BoxFit.cover)),
             ),
           ),
         ],
       ),
     );
   }
-
+  //
   @override
   void initState() {
     super.initState();

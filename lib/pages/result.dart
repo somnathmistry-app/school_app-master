@@ -93,45 +93,45 @@ class Result extends StatelessWidget {
                   ),
                   const SizedBox(height: 10,),
                   const Center(
-                    child: Text('Abhiraj Samanta',
+                    child: Text('Ishita Samanta',
                         style: TextStyle(fontSize: 21,fontWeight: FontWeight.bold)),
                   ),const SizedBox(height: 35,),
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 15,),
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
-                      color: AppColors.themeColorLight,
-                    ),
-                    child: ListView.builder(
-                      itemCount: 6,
-                      padding: EdgeInsets.zero,
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                        itemBuilder: (context, index) {
-                          return  Container(
-                            padding: const EdgeInsets.symmetric(vertical: 15),
-                            decoration: BoxDecoration(
-                              //borderRadius: BorderRadius.circular(10),
-                              border: const Border(
-                                bottom: BorderSide(color: Colors.grey,width: 0.9)
-                              ),
-                              color: AppColors.themeColorLight,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                MyWidgets.textView('Mathematics', Colors.black, 15),
-                                MyWidgets.textView('    100', Colors.black, 14),
-                                Row(
-                                  children: [
-                                    MyWidgets.textView('86', Colors.black, 14),
-                                    MyWidgets.textView(' - B', Colors.black, 14),
-                                  ],
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15,),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: ListView.builder(
+                        itemCount: 6,
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        physics: const NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return  Container(
+                              padding: const EdgeInsets.symmetric(vertical: 15),
+                              decoration: BoxDecoration(
+                                //borderRadius: BorderRadius.circular(10),
+                                border: const Border(
+                                  bottom: BorderSide(color: Colors.grey,width: 0.9)
                                 ),
-                              ],
-                            ),
-                          );
-                        },
+                                color: AppColors.themeColorLight,
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                children: [
+                                  MyWidgets.textView('Mathematics', Colors.black, 15),
+                                  MyWidgets.textView('    100', Colors.black, 14),
+                                  Row(
+                                    children: [
+                                      MyWidgets.textView('86', Colors.black, 14),
+                                      MyWidgets.textView(' - B', Colors.black, 14),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
 
+                      ),
                     ),
                   ),
                   const SizedBox(height: 30,),

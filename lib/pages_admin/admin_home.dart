@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:school_app/pages_admin/assignment/upload_assignment.dart';
 import 'package:school_app/pages_admin/blogs/all_blogs.dart';
 import 'package:school_app/pages_admin/dashboard_pages/dashboard_admin.dart';
@@ -97,8 +96,8 @@ class _AdminHomeState extends State<AdminHome> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: const [
-                          Text('adminName'),
-                          Text('adminEmail'),
+                          Text('Arita Chatterjee'),
+                          Text('arita@gmail.com'),
                           SizedBox(height: 8),
                         ],
                       ),

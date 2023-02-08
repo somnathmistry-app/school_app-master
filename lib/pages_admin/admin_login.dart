@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:school_app/controllers/login_controller.dart';
 import 'package:school_app/pages/log_in.dart';
-import 'package:school_app/pages_admin/dashboard_pages/dashboard_admin.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 import '../styles/app_colors.dart';
 import '../styles/common_module/my_widgets.dart';
@@ -24,7 +23,7 @@ class AdminLogin extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Image.asset('assets/images/adbg.jpg',fit: BoxFit.cover),
+            child: Image.asset('assets/images/bg_23.jpg',fit: BoxFit.cover),
             ),
           Positioned(
             top: 100,
@@ -34,14 +33,14 @@ class AdminLogin extends StatelessWidget {
               width: 120,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
                   image: const DecorationImage(
-                      image: AssetImage('assets/images/logo.png'))
+                      image: AssetImage('assets/images/logo_white.png'))
               ),
             ),
           ),
           Form(
             key: _key,
             child: SlidingSheet(
-              elevation: 8,
+              elevation: 0,
               color: Colors.white,
               cornerRadius: 16,
               snapSpec: const SnapSpec(
@@ -63,7 +62,8 @@ class AdminLogin extends StatelessWidget {
                           color: AppColors.darkGrey,
                         ),
                       ),
-                    ),const SizedBox(height: 20),
+                    ),
+                    const SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.only(right: 22),
                       child: MyWidgets.textView('Admin Login',
@@ -136,10 +136,11 @@ class AdminLogin extends StatelessWidget {
                               )
                           ),
                           onPressed: () {
-                            // if(_key.currentState!.validate()){
-                            //   loginController.getAdminLogin();
-                            // }
-                            Get.to(() => const AdminHome());
+                            if(_key.currentState!.validate()){
+                             // loginController.getAdminLogin();
+                              Get.to(() => const AdminHome());
+                            }
+
                           },
                           child: MyWidgets.textView("Proceed", AppColors.white, 16)),
                     ),

@@ -22,23 +22,23 @@ class LoginPage extends StatelessWidget {
           SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
-            child: Image.asset('assets/images/bg_a.jpg',fit: BoxFit.cover),
+            child: Image.asset('assets/images/bg_34.jpg',fit: BoxFit.fill),
           ),
           Positioned(
             top: 100,
-            right: 50,
+            right: 60,
             child: Container(
               height: 120,
               width: 120,
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(25),
                   image: const DecorationImage(
-                      image: AssetImage('assets/images/logo.png'))),
+                      image: AssetImage('assets/images/logo_white.png'))),
             ),
           ),
           Form(
             key: _key,
             child: SlidingSheet(
-              elevation: 8,
+              elevation: 0,
               color: Colors.white,
               cornerRadius: 16,
               snapSpec: const SnapSpec(
@@ -50,17 +50,18 @@ class LoginPage extends StatelessWidget {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    // const SizedBox(height: 20),
+                    // Center(
+                    //   child: Container(
+                    //     height: 2.5,
+                    //     width: 50,
+                    //     decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(15),
+                    //       color: AppColors.darkGrey,
+                    //     ),
+                    //   ),
+                    // ),
                     const SizedBox(height: 20),
-                    Center(
-                      child: Container(
-                        height: 2.5,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: AppColors.darkGrey,
-                        ),
-                      ),
-                    ),const SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.only(right: 22),
                       child: MyWidgets.textView('Student Login',
@@ -73,8 +74,10 @@ class LoginPage extends StatelessWidget {
                       // height: 50,
                       child: TextFormField(
                         controller: loginController.emailTEC,
+
                         validator: (input) =>
                         !input!.contains('@')? 'Invalid Email': null,
+
                         decoration: InputDecoration(
                           fillColor: AppColors.lightSeeGreen,
                           filled: true,
@@ -99,6 +102,7 @@ class LoginPage extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(horizontal: 30),
                       child: TextFormField(
                         obscureText: true,
+
                         validator: (value) =>
                         value!.isEmpty? 'Please Enter a Password': null,
                         controller:loginController.passwordTEC,
@@ -132,22 +136,23 @@ class LoginPage extends StatelessWidget {
                               )
                           ),
                           onPressed: () {
-                            // if(_key.currentState!.validate()){
-                            //   loginController.getLogin();
-                            // }
-                            Get.to(() => const DashBoard());
+                            if(_key.currentState!.validate()){
+                              //loginController.getLogin();
+                              Get.to(() => const DashBoard());
+                            }
+
                           },
                           child: MyWidgets.textView("Log In", AppColors.white, 16)),
                     ),
-                    const SizedBox(height: 15,),
+                    const SizedBox(height: 25,),
                     Padding(
                       padding: const EdgeInsets.only(right: 22),
                       child: MyWidgets.textView('Forget Password?', AppColors.black, 16),
                     ),
-                    Container(height: 40,),
+                    Container(height: 50,),
                     InkWell(
                       onTap: () {
-                        Get.to(()=> AdminLogin());
+                        Get.off(()=> AdminLogin());
                       },
                       child: SizedBox(
                         width: double.infinity,
@@ -157,7 +162,7 @@ class LoginPage extends StatelessWidget {
                           children: [
                             Text('   Admin Login ',style: TextStyle(fontSize: 16,color: AppColors.themeColor)),
                             Icon(Icons.arrow_forward,color: AppColors.themeColor,),
-                            const SizedBox(height: 15,)
+                            const SizedBox(height: 17,)
                           ],
                         ),
                       ),

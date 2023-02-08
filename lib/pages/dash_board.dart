@@ -186,7 +186,7 @@ class _DashBoardState extends State<DashBoard> {
                     child:
                     Container(
                       color: Colors.white,
-                      padding: const EdgeInsets.only(top: 20),
+                      padding: const EdgeInsets.only(top: 10),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
@@ -216,7 +216,7 @@ class _DashBoardState extends State<DashBoard> {
                               ),
                             ),
                             const SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             /// tab bar view here
                             Expanded(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../styles/common_module/app_bar.dart';
 
+
 class SchoolGallery extends StatelessWidget {
   const SchoolGallery({Key? key}) : super(key: key);
   @override

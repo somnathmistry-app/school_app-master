@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 appBar: AppBar(backgroundColor:AppColors.white,
                     centerTitle: true,
                     elevation: 0,
-                    title:  Text('School Name',
+                    title:  Text('i - Learning',
                       style: TextStyle(color:  AppColors.themeColor),),
                   actions: [
                     InkWell(
@@ -108,7 +108,8 @@ class _HomePageState extends State<HomePage> {
                 ),
                 body: ListView(
                   children: [
-                    Center(child: Text('School Name',style: TextStyle(color: AppColors.black),)),
+                    SizedBox(height: 5),
+                    Center(child: Text('i - Learning Management',style: TextStyle(color: AppColors.black),)),
                     const SizedBox(height: 15,width: double.infinity,),
                     CarouselSlider.builder(
                       itemCount: imgList.length,

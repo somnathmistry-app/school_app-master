@@ -9,7 +9,7 @@ import '../styles/common_module/app_bar.dart';
 class ResultCategory extends StatelessWidget {
   ResultCategory({Key? key}) : super(key: key);
 
-  List<String> gridText = ['Unit Tests', 'Assignment Result','Practicals', 'Final Result', ];
+  List<String> gridText = ['Unit Tests', 'Assignment\nResult','Practicals', 'Final Result', ];
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class ResultCategory extends StatelessWidget {
             childAspectRatio: 7/5,
               crossAxisCount: 3),
           itemCount: gridText.length,
-          padding: const EdgeInsets.only(top: 15),
+          padding: const EdgeInsets.only(top: 15,left: 5,right: 5),
           itemBuilder:
               (BuildContext context, int index) {
             return InkWell(
@@ -45,13 +45,13 @@ class ResultCategory extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: AppColors.black,
-                            fontSize: 15)),
+                            fontSize: 13)),
                     const SizedBox(height: 10,),
                     const Text('2022',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: Colors.grey,
-                            fontSize: 12)
+                            fontSize: 11)
                     ),
                   ],
                 ),
