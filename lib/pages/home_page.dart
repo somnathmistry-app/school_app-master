@@ -55,6 +55,29 @@ class _HomePageState extends State<HomePage> {
 
   HomeDataController homeDataController = Get.put(HomeDataController());
   var box = GetStorage();
+  Future<bool> showExitPopup() async {
+    return await showDialog( //show confirm dialogue
+      //the return value will be from "Yes" or "No" options
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Exit App'),
+        content: const Text('Do you want to exit?'),
+        actions:[
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(AppColors.themeColor)),
+            child:const Text('No'),
+          ),
+
+          ElevatedButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            style: ButtonStyle(backgroundColor: MaterialStateProperty.all(AppColors.themeColor)),
+            child:const Text('Yes'),
+          ),
+        ],
+      ),
+    )??false; //if showDialog had returned null, then return false
+  }
   @override
   Widget build(BuildContext context) {
     return
