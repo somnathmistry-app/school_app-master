@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           Get.to((){
                             if((box.read('isLogin')) == null || (box.read('isLogin')) == false){
-                              return  LoginPage();
+                              return LoginPage();
                             }else if((box.read('isLogin')) == 'StudentLogIn'){
                               return const DashBoard();
                             }else{
@@ -238,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                                   width: double.infinity,
                                   height: 200,
                                 ),
-                                const SizedBox(height: 8,),
+                                const SizedBox(height: 8),
                                 const Text(
                                   'Annual Show Images',
                                   style: TextStyle(fontSize: 14),
