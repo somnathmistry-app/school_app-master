@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/controllers/login_controller.dart';
-import 'package:school_app/pages/log_in.dart';
+import 'package:i_learning/controllers/login_controller.dart';
+import 'package:i_learning/pages/log_in.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 import '../styles/app_colors.dart';
 import '../styles/common_module/my_widgets.dart';

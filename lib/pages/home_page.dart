@@ -1,10 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:school_app/pages/dash_board.dart';
-import 'package:school_app/pages/log_in.dart';
-import 'package:school_app/pages_admin/admin_home.dart';
-import 'package:school_app/styles/app_colors.dart';
+import 'package:i_learning/pages/dash_board.dart';
+import 'package:i_learning/pages/log_in.dart';
+import 'package:i_learning/pages_admin/admin_home.dart';
+import 'package:i_learning/styles/app_colors.dart';
 
 import 'package:get/get.dart';
 import '../controllers/home_data_controller.dart';

@@ -4,7 +4,7 @@ import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart'
     show CalendarCarousel;
 import 'package:flutter_calendar_carousel/classes/event.dart';
 //import 'package:intl/intl.dart' show DateFormat;
-import 'package:school_app/styles/app_colors.dart';
+import 'package:i_learning/styles/app_colors.dart';
 
 import '../styles/common_module/app_bar.dart';
 

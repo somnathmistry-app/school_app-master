@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages/result_list.dart';
+import 'package:i_learning/pages/result_list.dart';
 
 import '../styles/app_colors.dart';
 import '../styles/common_module/app_bar.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:school_app/pages/dash_board.dart';
-import 'package:school_app/pages_admin/admin_home.dart';
+import 'package:i_learning/pages/dash_board.dart';
+import 'package:i_learning/pages_admin/admin_home.dart';
 import '../apis/login_api.dart';
 import '../styles/common_module/my_alert_dilog.dart';
 import '../styles/common_module/my_snack_bar.dart';

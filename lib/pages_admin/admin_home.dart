@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/pages_admin/assignment/upload_assignment.dart';
-import 'package:school_app/pages_admin/blogs/all_blogs.dart';
-import 'package:school_app/pages_admin/dashboard_pages/dashboard_admin.dart';
-import 'package:school_app/pages_admin/gallery_image/gallery_images.dart';
-import 'package:school_app/pages_admin/holidays_events.dart';
-import 'package:school_app/pages_admin/leaves/leave_request.dart';
-import 'package:school_app/pages_admin/results_upload.dart';
-import 'package:school_app/pages_admin/query/student_query.dart';
+import 'package:i_learning/pages_admin/assignment/upload_assignment.dart';
+import 'package:i_learning/pages_admin/blogs/all_blogs.dart';
+import 'package:i_learning/pages_admin/dashboard_pages/dashboard_admin.dart';
+import 'package:i_learning/pages_admin/gallery_image/gallery_images.dart';
+import 'package:i_learning/pages_admin/holidays_events.dart';
+import 'package:i_learning/pages_admin/leaves/leave_request.dart';
+import 'package:i_learning/pages_admin/results_upload.dart';
+import 'package:i_learning/pages_admin/query/student_query.dart';
 
 import '../styles/app_colors.dart';
 

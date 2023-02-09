@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages_admin/gallery_image/add_image.dart';
+import 'package:i_learning/pages_admin/gallery_image/add_image.dart';
 
 
 

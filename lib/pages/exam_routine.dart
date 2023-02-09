@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/styles/app_colors.dart';
-import 'package:school_app/styles/common_module/my_widgets.dart';
+import 'package:i_learning/styles/app_colors.dart';
+import 'package:i_learning/styles/common_module/my_widgets.dart';
 import '../styles/common_module/app_bar.dart';
 
 

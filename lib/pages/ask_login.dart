@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages/log_in.dart';
+import 'package:i_learning/pages/log_in.dart';
 
 
 class AskLogin extends StatelessWidget {

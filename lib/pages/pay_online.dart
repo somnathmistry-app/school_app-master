@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/styles/common_module/my_snack_bar.dart';
+import 'package:i_learning/styles/common_module/my_snack_bar.dart';
 
 import '../styles/app_colors.dart';
 import '../styles/common_module/app_bar.dart';

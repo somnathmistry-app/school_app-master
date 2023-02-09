@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/styles/app_colors.dart';
+import 'package:i_learning/styles/app_colors.dart';
 
 
 class MyAppBars {

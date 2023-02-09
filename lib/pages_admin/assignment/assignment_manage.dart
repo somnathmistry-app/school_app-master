@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages_admin/assignment/check_assignment.dart';
-import 'package:school_app/pages_admin/assignment/upload_assignment.dart';
+import 'package:i_learning/pages_admin/assignment/check_assignment.dart';
+import 'package:i_learning/pages_admin/assignment/upload_assignment.dart';
 
 import '../../styles/app_colors.dart';
 

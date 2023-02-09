@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages/edit_profile.dart';
+import 'package:i_learning/pages/edit_profile.dart';
 
 import '../styles/app_colors.dart';
 import '../styles/common_module/my_widgets.dart';

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/apis/upload_blog_api.dart';
+import 'package:i_learning/apis/upload_blog_api.dart';
 import '../styles/common_module/my_alert_dilog.dart';
 import '../styles/common_module/my_snack_bar.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_app/styles/common_module/my_widgets.dart';
+import 'package:i_learning/styles/common_module/my_widgets.dart';
 import 'package:sliding_sheet/sliding_sheet.dart';
 
 import '../styles/app_colors.dart';

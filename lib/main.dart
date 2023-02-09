@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:school_app/splash_screen.dart';
+import 'package:i_learning/splash_screen.dart';
 
 
 Future<void> main() async {

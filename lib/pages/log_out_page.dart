@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:school_app/pages/home_page.dart';
-import 'package:school_app/styles/common_module/my_snack_bar.dart';
+import 'package:i_learning/pages/home_page.dart';
+import 'package:i_learning/styles/common_module/my_snack_bar.dart';
 
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/styles/app_colors.dart';
-import 'package:school_app/styles/common_module/app_bar.dart';
+import 'package:i_learning/styles/app_colors.dart';
+import 'package:i_learning/styles/common_module/app_bar.dart';
 
 import 'event_details.dart';
 

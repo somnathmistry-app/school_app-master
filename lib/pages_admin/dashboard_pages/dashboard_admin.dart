@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages/log_out_page.dart';
-import 'package:school_app/pages_admin/dashboard_pages/all_class.dart';
+import 'package:i_learning/pages/log_out_page.dart';
+import 'package:i_learning/pages_admin/dashboard_pages/all_class.dart';
 
 import '../../styles/app_colors.dart';
 

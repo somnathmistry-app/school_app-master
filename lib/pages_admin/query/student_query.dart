@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:school_app/pages_admin/query/answer.dart';
+import 'package:i_learning/pages_admin/query/answer.dart';
 
 
 
